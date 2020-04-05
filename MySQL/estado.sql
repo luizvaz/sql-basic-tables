@@ -1,45 +1,21 @@
--- phpMyAdmin SQL Dump
--- version 4.5.0.2
--- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: 21-Maio-2016 às 02:13
--- Versão do servidor: 10.0.17-MariaDB
--- PHP Version: 5.6.14
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `test`
---
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `estado`
+-- Estrutura da tabela "estado"
 --
 
 CREATE TABLE `estado` (
-  `UF_ID` int(11) NOT NULL,
-  `UF_NOME` varchar(75) DEFAULT NULL,
-  `UF_UF` varchar(2) DEFAULT NULL,
-  `UF_IBGE` int(2) DEFAULT NULL,
-  `UF_SL` int(3) DEFAULT NULL,
-  `UF_DDD` varchar(50) DEFAULT NULL
+  `id` int(11) NOT NULL,
+  `nome` varchar(75) DEFAULT NULL,
+  `uf` varchar(2) DEFAULT NULL,
+  `ibge` int(2) DEFAULT NULL,
+  `pais` int(3) DEFAULT NULL,
+  `ddd` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Unidades Federativas';
 
 --
--- Extraindo dados da tabela `estado`
+-- Inserindo dados na tabela "estado"
 --
 
-INSERT INTO `estado` (`UF_ID`, `UF_NOME`, `UF_UF`, `UF_IBGE`, `UF_SL`, `UF_DDD`) VALUES
+INSERT INTO `estado` (`id`, `nome`, `uf`, `ibge`, `pais`, `ddd`) VALUES
 (1, 'Acre', 'AC', 12, 1, '68'),
 (2, 'Alagoas', 'AL', 27, 1, '82'),
 (3, 'Amazonas', 'AM', 13, 1, '97,92'),
@@ -70,24 +46,8 @@ INSERT INTO `estado` (`UF_ID`, `UF_NOME`, `UF_UF`, `UF_IBGE`, `UF_SL`, `UF_DDD`)
 (99, 'Exterior', 'EX', 99, NULL, NULL);
 
 --
--- Indexes for dumped tables
+-- Indexes for table "estado"
 --
 
---
--- Indexes for table `estado`
---
 ALTER TABLE `estado`
-  ADD PRIMARY KEY (`UF_ID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `estado`
---
-ALTER TABLE `estado`
-  MODIFY `UF_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  ADD PRIMARY KEY (`id`);
