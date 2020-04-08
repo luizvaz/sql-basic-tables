@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v1.2.5 - 08/04/2020
+
+- Update README e CHANGELOG.
+- Criação da tabela de CNAE.
+- Atualização da tabela de cidade com o código correspondente SEFAZ - TOM.
+- Criação dos scripts para web scrap dos códigos TOM e CNAE diretamente das fontes 
+
 ## v1.2.4 - 05/08/2019
 
 - Update README e CHANGELOG.
