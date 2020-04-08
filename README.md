@@ -101,6 +101,7 @@ O código de País do BACEN dos seguintes países tem o DV - dígito verificador
 
 ## Contribuições
 
+- [x] [@chinnonsantos](https://github.com/chinnonsantos) - Chinnon Santos
 - [x] [@luizvaz](https://github.com/luizvaz) - Luiz Vaz
 - [x] [@brunotdantas](https://github.com/brunotdantas) - Bruno Dantas
 - [x] [@gabrielozaki](https://github.com/gabrielozaki) - Gabriel Ozaki
