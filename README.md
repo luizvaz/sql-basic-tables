@@ -1,10 +1,11 @@
 # ARQUIVOS SQL COM DADOS BÁSICOS
 
-- TODOS OS PAÍSES (BACEN)
-- TODOS OS ESTADOS 
-- TODAS CIDADES DO BRASIL (IBGE)
+- PAÍSES (BACEN)
+- ESTADOS 
+- CIDADES DO BRASIL (IBGE)
     - Código SEFAZ - TOM
-- TODOS OS CNAES (IBGE - CONCLA) 
+    - Latitude e Longitude
+- CNAES (IBGE - CONCLA) 
 
 SQL de todos os __Países e Nações__ (c/ Código do Portal do Comércio Exterior ou BACEN) + __Estados e Federações Brasileiras__ (c/ DDD e Código do IBGE) + __Cidades e Municípios Brasileiros__ (c/ Código do IBGE), incluindo as 31 regiões administrativas do DF, Ilhas e Áreas Remotas do Mundo.
 
@@ -16,7 +17,7 @@ SQL de todos os __Países e Nações__ (c/ Código do Portal do Comércio Exteri
 
 *Em breve irei incluir estados e cidades estrangeiras.
 
-*Falta incluir latitude e longitude das cidades brasileiras para SQL Server.
+*Falta incluir latitude e longitude das cidades brasileiras para MySQL e SQL Server.
 
 ## Como Instalar
 

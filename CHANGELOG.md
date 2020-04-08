@@ -4,7 +4,7 @@
 
 - Update README e CHANGELOG.
 - Criação da tabela de CNAE.
-- Atualização da tabela de cidade com o código correspondente SEFAZ - TOM.
+- Atualização no PostgreSQL da tabela de cidade com o código correspondente SEFAZ - TOM e Lat/Lon.
 - Criação dos scripts para web scrap dos códigos TOM e CNAE diretamente das fontes 
 
 ## v1.2.4 - 05/08/2019
