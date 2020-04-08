@@ -1,4 +1,10 @@
-# SQL COM TODOS OS PAÍSES (BACEN) + TODOS OS ESTADOS E CIDADES DO BRASIL (IBGE)
+# ARQUIVOS SQL COM DADOS BÁSICOS
+
+- TODOS OS PAÍSES (BACEN)
+- TODOS OS ESTADOS 
+- TODAS CIDADES DO BRASIL (IBGE)
+    - Código SEFAZ - TOM
+- TODOS OS CNAES (IBGE - CONCLA) 
 
 SQL de todos os __Países e Nações__ (c/ Código do Portal do Comércio Exterior ou BACEN) + __Estados e Federações Brasileiras__ (c/ DDD e Código do IBGE) + __Cidades e Municípios Brasileiros__ (c/ Código do IBGE), incluindo as 31 regiões administrativas do DF, Ilhas e Áreas Remotas do Mundo.
 
@@ -10,7 +16,7 @@ SQL de todos os __Países e Nações__ (c/ Código do Portal do Comércio Exteri
 
 *Em breve irei incluir estados e cidades estrangeiras.
 
-*Em breve irei incluir informações sobre latitude e longitude de cidades brasileiras.
+*Falta incluir latitude e longitude das cidades brasileiras para SQL Server.
 
 ## Como Instalar
 
@@ -109,3 +115,4 @@ O código de País do BACEN dos seguintes países tem o DV - dígito verificador
 - [Áreas dos Municípios do Brasil (vigente em 30/04/2018)](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/estrutura-territorial/15761-areas-dos-municipios.html?=&t=o-que-e)
 - [Código IBGE das Unidade da Federação e Municípios do Brasil - 2018 - XLS](//geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/areas_territoriais/2018/AR_BR_RG_UF_MES_MIC_MUN_2018.xls)
 - [Panorama IBGE dos Municípios do Brasil](https://cidades.ibge.gov.br/brasil/go/goiania/panorama)
+- [IBGE Comissão Nacional de Classificação -CNAE](https://cnae.ibge.gov.br/classificacoes/download-concla.html)
