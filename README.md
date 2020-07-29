@@ -6,6 +6,7 @@
     - Código SEFAZ - TOM
     - Latitude e Longitude
 - CNAES (IBGE - CONCLA) 
+- CNPJS (Receita Federal do Brasil - DADOS PÚBLICOS (2020-07)) 
 
 SQL de todos os __Países e Nações__ (c/ Código do Portal do Comércio Exterior ou BACEN) + __Estados e Federações Brasileiras__ (c/ DDD e Código do IBGE) + __Cidades e Municípios Brasileiros__ (c/ Código do IBGE), incluindo as 31 regiões administrativas do DF, Ilhas e Áreas Remotas do Mundo.
 
@@ -118,3 +119,4 @@ O código de País do BACEN dos seguintes países tem o DV - dígito verificador
 - [Código IBGE das Unidade da Federação e Municípios do Brasil - 2018 - XLS](//geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/areas_territoriais/2018/AR_BR_RG_UF_MES_MIC_MUN_2018.xls)
 - [Panorama IBGE dos Municípios do Brasil](https://cidades.ibge.gov.br/brasil/go/goiania/panorama)
 - [IBGE Comissão Nacional de Classificação -CNAE](https://cnae.ibge.gov.br/classificacoes/download-concla.html)
+- [Dados Públicos CNPJ](http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/dados-publicos-cnpj)
