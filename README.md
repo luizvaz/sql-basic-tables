@@ -12,13 +12,13 @@ SQL de todos os __Países e Nações__ (c/ Código do Portal do Comércio Exteri
 
 > Obs.: A tabela de Países está sofrendo atualizações na coluna do Código BACEN, priorizando o código do País através da tabela de países do **Portal do Comércio Exterior**, sendo assim em alguns casos o código **BACEN** do País está recebendo o Código do Portal de Comércio Exterior, levando em consideração que a Receita Federal está exigindo essa tabela em relação ao BACEN em seus documentos fiscais. Vide Nota Técnica 2018.003 no portal da nota fiscal eletrônica.
 
-*Arquivos separados por tipo de ___SGBD___ em Pastas.
+- Arquivos separados por tipo de ___SGBD___ em Pastas.
 
-*Arquivos separados por tabela.
+- Arquivos separados por tabela.
 
-*Em breve irei incluir estados e cidades estrangeiras.
+- Em breve, estados e cidades estrangeiras.
 
-*Falta incluir latitude e longitude das cidades brasileiras para MySQL e SQL Server.
+- Falta incluir latitude e longitude das cidades brasileiras para MySQL e SQL Server.
 
 ## Como Instalar
 
@@ -30,9 +30,9 @@ Bem simples, como os arquivos SQL possui comandos de exclusão da tabela antes d
 
 ## Dicas e Sugestões de Uso
 
-*Todos os Estados/Distritos e Cidades/Municípios Brasileiros possui um código único de identificação do IBGE, porem nem todos os Países e Nações do mundo possui um código único de identificação do BACEN, devido ao BACEN só catalogar Países dos quais ele possui ligação financeira (Agencias Bancarias ou Correspondente bancário), geralmente esses países (ou espaços governados por outras nações) são ilhas inabitadas ou regiões inabitadas próximas das Antártida, não se preocupe com isso, provavelmente sua aplicação nunca irá precisar utilizar essa localização.
+- Todos os Estados/Distritos e Cidades/Municípios Brasileiros possui um código único de identificação do IBGE, porem nem todos os Países e Nações do mundo possui um código único de identificação do BACEN, devido ao BACEN só catalogar Países dos quais ele possui ligação financeira (Agencias Bancarias ou Correspondente bancário), geralmente esses países (ou espaços governados por outras nações) são ilhas inabitadas ou regiões inabitadas próximas das Antártida, não se preocupe com isso, provavelmente sua aplicação nunca irá precisar utilizar essa localização.
 
-*A tabela de 'pais' possui todos os Países e Nações possíveis com ou sem Sigla, ~~com ou sem Código do BACEN~~, com Nome Original e Nome Traduzido para o Português.
+- A tabela de 'pais' possui todos os Países e Nações possíveis com ou sem Sigla, ~~com ou sem Código do BACEN~~, com Nome Original e Nome Traduzido para o Português.
 
 ## Validações
 
