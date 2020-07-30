@@ -137,4 +137,4 @@ update cidade set cod_tom = '9621' where uf = 27 and upper(trim(unaccent(nome)))
 update cidade set cod_tom = '0102' where uf = 27 and upper(trim(unaccent(nome))) like 'TUPIRAMA'; 
 update cidade set cod_tom = '0365' where uf = 27 and upper(trim(unaccent(nome))) like 'TUPIRATINS'; 
 update cidade set cod_tom = '9665' where uf = 27 and upper(trim(unaccent(nome))) like 'WANDERLANDIA'; 
-update cidade set cod_tom = '9643' where uf = 27 and upper(trim(unaccent(nome))) like 'XAMBIOA'; 
+update cidade set cod_tom = '9643' where uf = 27 and upper(trim(unaccent(nome))) like 'XAMBIOA';

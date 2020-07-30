@@ -183,4 +183,4 @@ update cidade set cod_tom = '2291' where uf = 16 and upper(trim(unaccent(nome)))
 update cidade set cod_tom = '2623' where uf = 16 and upper(trim(unaccent(nome))) like 'VERTENTES'; 
 update cidade set cod_tom = '2625' where uf = 16 and upper(trim(unaccent(nome))) like 'VICENCIA'; 
 update cidade set cod_tom = '2627' where uf = 16 and upper(trim(unaccent(nome))) like 'VITORIA DE SANTO ANTAO'; 
-update cidade set cod_tom = '2293' where uf = 16 and upper(trim(unaccent(nome))) like 'XEXEU'; 
+update cidade set cod_tom = '2293' where uf = 16 and upper(trim(unaccent(nome))) like 'XEXEU';

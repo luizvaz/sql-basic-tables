@@ -244,4 +244,4 @@ update cidade set cod_tom = '9639' where uf = 9 and upper(trim(unaccent(nome))) 
 update cidade set cod_tom = '9641' where uf = 9 and upper(trim(unaccent(nome))) like 'VIANOPOLIS'; 
 update cidade set cod_tom = '9657' where uf = 9 and upper(trim(unaccent(nome))) like 'VICENTINOPOLIS'; 
 update cidade set cod_tom = '0067' where uf = 9 and upper(trim(unaccent(nome))) like 'VILA BOA'; 
-update cidade set cod_tom = '1068' where uf = 9 and upper(trim(unaccent(nome))) like 'VILA PROPICIO'; 
+update cidade set cod_tom = '1068' where uf = 9 and upper(trim(unaccent(nome))) like 'VILA PROPICIO';

@@ -182,4 +182,4 @@ update cidade set cod_tom = '1577' where uf = 6 and upper(trim(unaccent(nome))) 
 update cidade set cod_tom = '1579' where uf = 6 and upper(trim(unaccent(nome))) like 'URUOCA'; 
 update cidade set cod_tom = '9857' where uf = 6 and upper(trim(unaccent(nome))) like 'VARJOTA'; 
 update cidade set cod_tom = '1581' where uf = 6 and upper(trim(unaccent(nome))) like 'VARZEA ALEGRE'; 
-update cidade set cod_tom = '1583' where uf = 6 and upper(trim(unaccent(nome))) like 'VICOSA DO CEARA'; 
+update cidade set cod_tom = '1583' where uf = 6 and upper(trim(unaccent(nome))) like 'VICOSA DO CEARA';

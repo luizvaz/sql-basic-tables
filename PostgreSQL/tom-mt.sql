@@ -139,4 +139,4 @@ update cidade set cod_tom = '1102' where uf = 13 and upper(trim(unaccent(nome)))
 update cidade set cod_tom = '9167' where uf = 13 and upper(trim(unaccent(nome))) like 'VARZEA GRANDE'; 
 update cidade set cod_tom = '9905' where uf = 13 and upper(trim(unaccent(nome))) like 'VERA'; 
 update cidade set cod_tom = '9109' where uf = 13 and upper(trim(unaccent(nome))) like 'VILA BELA DA SANTISSIMA TRINDADE'; 
-update cidade set cod_tom = '9897' where uf = 13 and upper(trim(unaccent(nome))) like 'VILA RICA'; 
+update cidade set cod_tom = '9897' where uf = 13 and upper(trim(unaccent(nome))) like 'VILA RICA';

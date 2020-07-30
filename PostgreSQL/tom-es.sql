@@ -76,4 +76,4 @@ update cidade set cod_tom = '5701' where uf = 8 and upper(trim(unaccent(nome))) 
 update cidade set cod_tom = '2935' where uf = 8 and upper(trim(unaccent(nome))) like 'VILA PAVAO'; 
 update cidade set cod_tom = '0768' where uf = 8 and upper(trim(unaccent(nome))) like 'VILA VALERIO'; 
 update cidade set cod_tom = '5703' where uf = 8 and upper(trim(unaccent(nome))) like 'VILA VELHA'; 
-update cidade set cod_tom = '5705' where uf = 8 and upper(trim(unaccent(nome))) like 'VITORIA'; 
+update cidade set cod_tom = '5705' where uf = 8 and upper(trim(unaccent(nome))) like 'VITORIA';

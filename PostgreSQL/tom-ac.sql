@@ -19,4 +19,4 @@ update cidade set cod_tom = '0661' where uf = 1 and upper(trim(unaccent(nome))) 
 update cidade set cod_tom = '0145' where uf = 1 and upper(trim(unaccent(nome))) like 'SENA MADUREIRA'; 
 update cidade set cod_tom = '0153' where uf = 1 and upper(trim(unaccent(nome))) like 'SENADOR GUIOMARD'; 
 update cidade set cod_tom = '0147' where uf = 1 and upper(trim(unaccent(nome))) like 'TARAUACA'; 
-update cidade set cod_tom = '0149' where uf = 1 and upper(trim(unaccent(nome))) like 'XAPURI'; 
+update cidade set cod_tom = '0149' where uf = 1 and upper(trim(unaccent(nome))) like 'XAPURI';

@@ -850,4 +850,4 @@ update cidade set cod_tom = '5437' where uf = 11 and upper(trim(unaccent(nome)))
 update cidade set cod_tom = '5439' where uf = 11 and upper(trim(unaccent(nome))) like 'VIRGOLANDIA'; 
 update cidade set cod_tom = '5441' where uf = 11 and upper(trim(unaccent(nome))) like 'VISCONDE DO RIO BRANCO'; 
 update cidade set cod_tom = '5443' where uf = 11 and upper(trim(unaccent(nome))) like 'VOLTA GRANDE'; 
-update cidade set cod_tom = '5421' where uf = 11 and upper(trim(unaccent(nome))) like 'WENCESLAU BRAZ'; 
+update cidade set cod_tom = '5421' where uf = 11 and upper(trim(unaccent(nome))) like 'WENCESLAU BRAZ';

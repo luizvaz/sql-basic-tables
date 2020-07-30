@@ -222,4 +222,4 @@ update cidade set cod_tom = '2267' where uf = 17 and upper(trim(unaccent(nome)))
 update cidade set cod_tom = '1227' where uf = 17 and upper(trim(unaccent(nome))) like 'VARZEA GRANDE'; 
 update cidade set cod_tom = '0406' where uf = 17 and upper(trim(unaccent(nome))) like 'VERA MENDES'; 
 update cidade set cod_tom = '0408' where uf = 17 and upper(trim(unaccent(nome))) like 'VILA NOVA DO PIAUI'; 
-update cidade set cod_tom = '0410' where uf = 17 and upper(trim(unaccent(nome))) like 'WALL FERRAZ'; 
+update cidade set cod_tom = '0410' where uf = 17 and upper(trim(unaccent(nome))) like 'WALL FERRAZ';

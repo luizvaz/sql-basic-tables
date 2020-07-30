@@ -59,4 +59,4 @@ update cidade set cod_tom = '0281' where uf = 3 and upper(trim(unaccent(nome))) 
 update cidade set cod_tom = '9851' where uf = 3 and upper(trim(unaccent(nome))) like 'TONANTINS'; 
 update cidade set cod_tom = '9849' where uf = 3 and upper(trim(unaccent(nome))) like 'UARINI'; 
 update cidade set cod_tom = '0285' where uf = 3 and upper(trim(unaccent(nome))) like 'URUCARA'; 
-update cidade set cod_tom = '0287' where uf = 3 and upper(trim(unaccent(nome))) like 'URUCURITUBA'; 
+update cidade set cod_tom = '0287' where uf = 3 and upper(trim(unaccent(nome))) like 'URUCURITUBA';
