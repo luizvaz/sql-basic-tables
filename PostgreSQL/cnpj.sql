@@ -1,5 +1,5 @@
 
-DROP TABLE IF EXISTS cnae CASCADE;
+DROP TABLE IF EXISTS cnpj CASCADE;
 
 CREATE TABLE cnpj (
   id                       serial NOT NULL PRIMARY KEY,
