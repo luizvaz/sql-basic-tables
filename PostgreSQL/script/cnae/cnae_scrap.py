@@ -12,7 +12,7 @@ Execução:
         $ python cnae_scrap.py
 
 .. _Repositório da Tabela de Municípios:
-   https://github.com/chinnonsantos/sql-paises-estados-cidades
+   https://github.com/luizvaz/sql-basic-tables
 
 .. _Extensão Pandas e XLRD:
    pip install pandas
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     secao_len, grupo_len, classe_len, divisao_len, subclasse_len \
         = ('', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0)
 
-    # Encontra o início dos das
+    # Encontra o início dos dados
     for row in range(df.shape[0]):
         # Seção
         tmp = df.iat[row, 0]

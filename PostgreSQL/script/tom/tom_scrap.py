@@ -29,11 +29,8 @@ Execução:
 
         $ python tom_scrap.py
 
-Todo:
-    * Criar arquivo shell correspondente ao .BAT
-
 .. _Repositório da Tabela de Municípios:
-   https://github.com/chinnonsantos/sql-paises-estados-cidades
+   https://github.com/luizvaz/sql-basic-tables
 
 .. _Package beautifulsoup4:
    https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup
@@ -96,7 +93,7 @@ if __name__ == "__main__":
     for uf in ufs:
         data = get_tom(url, uf, uf[0])
 
-        file = "cod_tom-{0}.sql".format(uf[0])
+        file = "tom-{0}.sql".format(uf[0])
         file1 = open(file, "w")  # write mode
         file1.write(data)
         file1.close()
@@ -108,7 +105,7 @@ if __name__ == "__main__":
     for m in mun:
         data += get_tom(url, m, 'mg')
 
-    file = "cod_tom-mg.sql"
+    file = "tom-mg.sql"
     file1 = open(file, "w")  # write mode
     file1.write(data)
     file1.close()
