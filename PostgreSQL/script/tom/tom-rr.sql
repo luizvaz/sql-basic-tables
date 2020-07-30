@@ -1,0 +1,15 @@
+update cidade set cod_tom = '0305' where uf = 22 and upper(trim(unaccent(nome))) like 'ALTO ALEGRE'; 
+update cidade set cod_tom = '0026' where uf = 22 and upper(trim(unaccent(nome))) like 'AMAJARI'; 
+update cidade set cod_tom = '0301' where uf = 22 and upper(trim(unaccent(nome))) like 'BOA VISTA'; 
+update cidade set cod_tom = '0307' where uf = 22 and upper(trim(unaccent(nome))) like 'BONFIM'; 
+update cidade set cod_tom = '0028' where uf = 22 and upper(trim(unaccent(nome))) like 'CANTA'; 
+update cidade set cod_tom = '0303' where uf = 22 and upper(trim(unaccent(nome))) like 'CARACARAI'; 
+update cidade set cod_tom = '0030' where uf = 22 and upper(trim(unaccent(nome))) like 'CAROEBE'; 
+update cidade set cod_tom = '0032' where uf = 22 and upper(trim(unaccent(nome))) like 'IRACEMA'; 
+update cidade set cod_tom = '0309' where uf = 22 and upper(trim(unaccent(nome))) like 'MUCAJAI'; 
+update cidade set cod_tom = '0311' where uf = 22 and upper(trim(unaccent(nome))) like 'NORMANDIA'; 
+update cidade set cod_tom = '0034' where uf = 22 and upper(trim(unaccent(nome))) like 'PACARAIMA'; 
+update cidade set cod_tom = '0036' where uf = 22 and upper(trim(unaccent(nome))) like 'RORAINOPOLIS'; 
+update cidade set cod_tom = '0313' where uf = 22 and upper(trim(unaccent(nome))) like 'SAO JOAO DA BALIZA'; 
+update cidade set cod_tom = '0315' where uf = 22 and upper(trim(unaccent(nome))) like 'SAO LUIZ'; 
+update cidade set cod_tom = '0038' where uf = 22 and upper(trim(unaccent(nome))) like 'UIRAMUTA';
