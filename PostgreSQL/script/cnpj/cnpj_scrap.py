@@ -31,12 +31,14 @@ Os scripts filtro_xx.sh, farão de forma automática a geração dos arquivos
 por UF, para cada uma respectivamente.
 
 Requisitos:
-        - Python: pip install BeautifulSoup4
-        - Python: pip install Requests
+        - Python: pip3 install BeautifulSoup4
+        - Python: pip3 install Requests
 
 Execução:
 
-        $ python update.py
+        $ python cnpj_scrap.py
+        $ wget --content-disposition --trust-server-names -N -i download.txt &
+        $ sh filtro.sh MG &
 
 .. _Repositório da Tabela de Municípios:
    https://github.com/luizvaz/sql-basic-tables
