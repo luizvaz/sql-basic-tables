@@ -10,7 +10,7 @@ CREATE TABLE cnpj (
   Situacao_Cadastral       varchar(2),
   Data_Situacao            date,
   Motivo_Situacao          varchar(2), 
-  Cidade_Exterior          varchar(50),
+  Cidade_Exterior          varchar(60),
   Codigo_Pais              varchar(3),
   Nome_Pais                varchar(70),
   Natureza_Juridica        varchar(4),
@@ -49,7 +49,7 @@ COMMENT ON COLUMN public.cnpj.Porte_Empresa
   IS '00 - NAO INFORMADO, 01 - MICRO EMPRESA, 03 - EMPRESA DE PEQUENO PORTE, 05 - DEMAIS';
   
 COMMENT ON COLUMN public.cnpj.Simples
-  IS '0 OU BRANCO - N√O OPTANTE, 5 E 7 ñ OPTANTES PELO SIMPLES, 6 E 8 ñ EXCLUÕDO DO SIMPLES';
+  IS '0 OU BRANCO - N√ÉO OPTANTE, 5 E 7 ‚Äì OPTANTES PELO SIMPLES, 6 E 8 ‚Äì EXCLU√çDO DO SIMPLES';
   
 COMMENT ON COLUMN public.cnpj.Opcao_MEI
   IS 'S - SIM, N - NAO, OUTROS - BRANCO';
@@ -59,71 +59,71 @@ TRUNCATE TABLE cnpj RESTART IDENTITY;
 --------------------------------------------------
 -- OBS:
 --
--- Antes de executar, descomente o cÛdigo abaixo e
--- corrija manualmente a localizaÁ„o dos arquivos.
+-- Antes de executar, descomente o c√≥digo abaixo e
+-- corrija manualmente a localiza√ß√£o dos arquivos.
 --
 -- Exemplo: 
 --   /home/admin/DADOS_ABERTOS_CNPJ_01.csv
 --------------------------------------------------
 
 /*
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_01.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_02.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_03.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_04.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_05.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_06.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_07.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_08.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_09.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_10.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_11.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_12.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_13.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_14.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_15.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_16.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_17.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_18.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_19.csv' DELIMITER '|' CSV HEADER;
 
-COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
+\COPY cnpj (CNPJ,Matriz_Filial,Razao,Fantasia,Situacao_Cadastral,Data_Situacao,Motivo_Situacao,Cidade_Exterior,Codigo_Pais,Nome_Pais,Natureza_Juridica,Data_Inicio_Atividade,CNAE_Fiscal,Tipo_Logradouro,Logradouro,Numero,Complemento,Bairro,CEP,UF,Codigo_Municipio,Municipio,Telefone1,Telefone2,Fax,eMail,Qualificacao_Responsavel,Capital_Social,Porte_Empresa,Simples,Data_Opcao_Simples,Data_Exclusao_Simples,Opcao_MEI,Situacao_Especial,Data_Situacao_Especial)
 FROM 'DADOS_ABERTOS_CNPJ_20.csv' DELIMITER '|' CSV HEADER;
 */
